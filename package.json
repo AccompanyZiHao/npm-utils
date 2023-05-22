@@ -1,11 +1,20 @@
 {
-  "name": "webviewjavascriptbridge",
-  "version": "1.0.0",
+  "name": "npm-utils-zh",
+  "version": "1.0.1",
   "description": "ios bridge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AccompanyZiHao/npm-utils.git",
+    "directory": "packages/plugin-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/AccompanyZiHao/npm-utils/issues"
+  },
+  "homepage": "https://github.com/AccompanyZiHao/npm-utils",
   "author": "cabbage",
   "license": "ISC"
 }
