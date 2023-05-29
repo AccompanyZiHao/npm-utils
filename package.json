@@ -1,8 +1,7 @@
 {
   "name": "npm-utils-zh",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ios bridge",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +15,7 @@
   },
   "homepage": "https://github.com/AccompanyZiHao/npm-utils",
   "author": "cabbage",
+  "main": "src/index.ts",
   "type": "module",
   "license": "ISC",
   "dependencies": {
