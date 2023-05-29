@@ -1,6 +1,6 @@
 {
   "name": "npm-utils-zh",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "ios bridge",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,10 @@
   "author": "cabbage",
   "main": "lib/index.js",
   "type": "module",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
   "license": "ISC",
   "dependencies": {
     "dsbridge": "^3.1.4"
