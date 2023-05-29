@@ -1,2 +1,3 @@
 import dsBridge from './dsBridge'
-export default { dsBridge };
+
+module.exports = { dsBridge };
