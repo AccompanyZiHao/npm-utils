@@ -16,5 +16,8 @@
   },
   "homepage": "https://github.com/AccompanyZiHao/npm-utils",
   "author": "cabbage",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dsbridge": "^3.1.4"
+  }
 }

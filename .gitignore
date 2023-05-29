@@ -1,0 +1,13 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+.idea/modules.xml
+.idea/workspace.xml
+*.iml
+out
+gen
+dist
+node_modules
+pnpm-lock.yaml

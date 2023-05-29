@@ -1,5 +1,2 @@
-import { jsBridge } from './webviewjavascriptbridge';
-
-export default {
-  jsBridge
-};
+import dsBridge from './dsBridge'
+export default { dsBridge };
