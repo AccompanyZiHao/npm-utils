@@ -1,3 +1,3 @@
-import dsBridge from './dsBridge'
+import dsBridge from './dsbridge/index'
 
 module.exports = { dsBridge };

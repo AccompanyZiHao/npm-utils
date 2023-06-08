@@ -1,5 +1,5 @@
-import ios from './ios';
-import android from './android';
+import ios from './ios/index';
+import android from './android/index';
 
 const { userAgent } = navigator;
 const isAndroid =
