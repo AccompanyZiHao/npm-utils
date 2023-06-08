@@ -2,7 +2,7 @@
 // @ts-ignore
 const win: any = window;
 
-function setupWKWebViewJavascriptBridge(callback) {
+function setupWKWebViewJavascriptBridge(callback, failCallback) {
   try {
     // @ts-ignore
     document.addEventListener(
@@ -24,15 +24,16 @@ function setupWKWebViewJavascriptBridge(callback) {
   } catch (e) {
     // @ts-ignore
     console.log(e);
+    failCallback(e)
   }
 
 }
 
-const bridgeCallHandler = (callback: any) => {
+const bridgeCallHandler = (callback: any, failCallback) => {
   if (win.WebViewJavascriptBridge) {
     return win.WebViewJavascriptBridge;
   }
-  setupWKWebViewJavascriptBridge(callback);
+  setupWKWebViewJavascriptBridge(callback,failCallback);
 };
 export const jsBridge = (method: string, data = {}) => {
   return new Promise((resolve, reject) => {
@@ -40,6 +41,8 @@ export const jsBridge = (method: string, data = {}) => {
       bridge.callHandler(method, data, function (responseData: any) {
         resolve(responseData);
       });
+    },(e)=>{
+      reject(e)
     });
   });
 };
