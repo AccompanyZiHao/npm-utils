@@ -3,6 +3,8 @@
     "target": "es2015",
     "module": "es2015",
     "declaration": true,
+    "useDefineForClassFields": true,
+    "moduleResolution": "node",
     "outDir": "./lib",
     "strict": false,
     "lib": [
@@ -13,7 +15,12 @@
     "types": [
       "node"
     ],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": { // 用于设置模块名到基于baseUrl的路径映射
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]

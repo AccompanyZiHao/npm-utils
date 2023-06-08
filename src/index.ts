@@ -1,3 +1,3 @@
-import dsBridge from './dsbridge/index'
+import { dsBridge } from './dsbridge'
 
-module.exports = { ...dsBridge };
+export default  { dsBridge };
