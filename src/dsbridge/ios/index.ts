@@ -75,6 +75,13 @@ export default {
   onLoadFinished() {
     return jsBridge('onLoadFinished');
   },
+  schemeJump(liveId: string, type?: number) {
+    if(type == 2){
+      window.location.href='wormhole://liveId=' + liveId;
+      return
+    }
+    return jsBridge('schemeJump', { liveId });
+  },
   // 终端存储数据
   setAppCache(key: string, value: boolean) {
     return jsBridge('setBool', { key, value });

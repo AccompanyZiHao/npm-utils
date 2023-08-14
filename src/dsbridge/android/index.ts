@@ -91,6 +91,12 @@ export default {
   getCurrentGameInfo() {
     return jsBridge('getCurrentGameInfo');
   },
+  schemeJump(liveId: string, type?: number) {
+    if (type == 2) {
+      window.open('myscheme://com.vpb.popo?action=toChatRoom&liveId='+liveId)
+    }
+    return jsBridge('schemeJump', liveId);
+  },
   // 通知终端加载完成
   onLoadFinished() {
     return jsBridge('onLoadFinished');
