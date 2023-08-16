@@ -1,4 +1,5 @@
 import { jsBridge } from './webviewjavascriptbridge';
+import { SchemaJumpParamsType } from "@/type";
 
 export default {
   // 获取 app 版本号
@@ -75,13 +76,13 @@ export default {
   onLoadFinished() {
     return jsBridge('onLoadFinished');
   },
-  schemeJump(liveId: string, type?: number) {
+  schemeJump(params: SchemaJumpParamsType, type: 1 | 2  = 1) {
     // todo
     if(type == 2){
-      window.location.href='wormhole://liveId=' + liveId;
+      // window.location.href='wormhole://liveId=' + liveId;
       return
     }
-    return jsBridge('schemeJump', { liveId });
+    return jsBridge('schemeJump', params);
   },
   // 终端存储数据
   setAppCache(key: string, value: boolean) {
