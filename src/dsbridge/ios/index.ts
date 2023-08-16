@@ -76,6 +76,7 @@ export default {
     return jsBridge('onLoadFinished');
   },
   schemeJump(liveId: string, type?: number) {
+    // todo
     if(type == 2){
       window.location.href='wormhole://liveId=' + liveId;
       return

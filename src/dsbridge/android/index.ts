@@ -1,4 +1,5 @@
 import dsBridge from 'dsbridge';
+import { SchemaJumpParamsType } from "@/type";
 
 const jsBridge = (method, data = null) => {
   return new Promise((resolve, reject) => {
@@ -91,11 +92,18 @@ export default {
   getCurrentGameInfo() {
     return jsBridge('getCurrentGameInfo');
   },
-  schemeJump(liveId: string, type?: number) {
-    if (type == 2) {
-      window.open('myscheme://com.vpb.popo?action=toChatRoom&liveId='+liveId)
+  schemeJump(params: SchemaJumpParamsType, type: 1 | 2  = 1) {
+    let str = 'myscheme://com.vpb.popo?';
+    for (let key in params) {
+      str += `${key}=${params[key]}&`;
     }
-    return jsBridge('schemeJump', liveId);
+    str = str.slice(0, - 1);
+    if(type == 1){
+      window.location.href = str
+    }
+    if (type == 2) {
+      window.open(str)
+    }
   },
   // 通知终端加载完成
   onLoadFinished() {
