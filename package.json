@@ -1,6 +1,6 @@
 {
   "name": "npm-utils-zh",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "ios bridge",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
