@@ -2,6 +2,9 @@ import { jsBridge } from './webviewjavascriptbridge';
 import { SchemaJumpParamsType } from "@/type";
 
 export default {
+  get(methods: string) {
+    return jsBridge(methods);
+  },
   // 获取 app 版本号
   async getAppVersionCode() {
     return jsBridge('getAppVersionCode');
