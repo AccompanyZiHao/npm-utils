@@ -12,7 +12,8 @@ export default {
     return jsBridge(methods);
   },
   async getAppMethods (methods: string, params: any){
-    return jsBridge(methods, JSON.stringify(params));
+    const data = typeof params === 'string'? params :JSON.stringify(params);
+    return jsBridge(methods, data);
   },
   // 获取 app 版本号
   async getAppVersionCode() {
