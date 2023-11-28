@@ -11,6 +11,9 @@ export default {
   get(methods: string) {
     return jsBridge(methods);
   },
+  async getAppMethods (methods: string, params: any){
+    return jsBridge(methods, JSON.stringify(params));
+  },
   // 获取 app 版本号
   async getAppVersionCode() {
     const v = await jsBridge('getAppVersionCode');
