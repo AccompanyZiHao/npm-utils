@@ -5,9 +5,8 @@ export default {
   get(methods: string) {
     return jsBridge(methods);
   },
-  async getAppMethods (methods: string, params: any){
-    const data = typeof params === 'string'? params :JSON.stringify(params);
-    return jsBridge(methods, data);
+  async getAppMethods (methods: string, params: object){
+    return jsBridge(methods, params);
   },
   // 获取 app 版本号
   async getAppVersionCode() {
